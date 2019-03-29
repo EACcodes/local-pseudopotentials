@@ -1,0 +1,70 @@
+###OGOLEM###
+<ADAPTIVE>
+AdaptivableChoice=forcematchingprofess:nogauss=12;potcutoff=30.0;origppfile=ppfile.pot;bigbeta=0.0521182683
+ParameterGlobOpt=parameters{xover(portugal:nocuts=1)mutation(germany:)}
+ParamGlobOptIter=10000
+PopulationSize=100
+ParamSeedingFolder=seeds
+#ParamThreshLocOptParam=1e-4
+#ParamThreshLocOptGradient=1e-4
+ParameterLocOpt=bobyqa:backend=alldefault
+#ParameterLocOpt=none:backend=alldefault
+# reference terms
+<REFERENCE>
+<PATH>
+alpha_struct.ion
+</PATH>
+<BULKMODULUS>
+Ga( alpha):46
+</BULKMODULUS>
+<CELLVOLUME>
+Ga( alpha):83.887
+</CELLVOLUME>
+<ENERGY>
+-237.40
+</ENERGY>
+<REFMAXDIFF>
+3
+</REFMAXDIFF>
+</REFERENCE>
+<REFERENCE>
+<PATH>
+beta_struct.ion
+</PATH>
+<BULKMODULUS>
+Ga( beta):45
+</BULKMODULUS>
+<CELLVOLUME>
+Ga( beta):39.705
+</CELLVOLUME>
+<ENERGY>
+-118.66
+</ENERGY>
+<REFMAXDIFF>
+3
+</REFMAXDIFF>
+</REFERENCE>
+# function term config
+<FITNESSFUNCTIONTERMS>
+<ENERGYTERM>
+UseMaxAllowedDiffs=true
+PenaltyConst=1.0
+PenaltyPow=2.0
+</ENERGYTERM>
+<FORCESTERM>
+UseMaxAllowedDiffs=true
+PenaltyConst=1.0
+PenaltyPow=2.0
+</FORCESTERM>
+<BULKMODULUSTERM>
+UseMaxAllowedDiffs=true
+PenaltyConst=1.0
+PenaltyPow=2.0
+</BULKMODULUSTERM>
+<CELLVOLUMETERM>
+UseMaxAllowedDiffs=true
+PenaltyConst=1.0
+PenaltyPow=2.0
+</CELLVOLUMETERM>
+</FITNESSFUNCTIONTERMS>
+</ADAPTIVE>
